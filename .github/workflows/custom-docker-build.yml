@@ -38,3 +38,5 @@ jobs:
         tags: ${{ secrets.DOCKER_HUB_USERNAME }}/esphome:latest
         cache-from: type=registry,ref=${{ secrets.DOCKER_HUB_USERNAME }}/esphome:buildcache
         cache-to: type=registry,ref=${{ secrets.DOCKER_HUB_USERNAME }}/esphome:buildcache,mode=max
+        build-args: |
+          BUILD_VERSION=2025.4.0-dev
